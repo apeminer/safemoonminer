@@ -101,7 +101,7 @@ function refreshData(){
     var balanceElem = document.getElementById('contract-balance');
     contractBalance(function(result){
         balance = +result;
-        rawStr = numberWithCommas(Number(result).toFixed(3));
+        rawStr = numberWithCommas(Number(result*1000000000).toFixed(3));
         const tokenBal = stripDecimals(rawStr, 3) + ' safemoon';
 
 
@@ -118,7 +118,7 @@ function refreshData(){
 
     var userBalanceElem = document.getElementById('user-balance');
     userBalance(function(result){
-        rawStr = numberWithCommas(Number(result).toFixed(3));
+        rawStr = numberWithCommas(Number(result*1000000000).toFixed(3));
         userBalanceElem.textContent = stripDecimals(rawStr, 3) + ' safemoon';
     });
 
