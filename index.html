@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<meta content="Hire Miners to earn SAFEMOON" name="description">
+	<meta name="image" content="miner-og-image.html">
+	<!-- opengraph image -->
+	<meta property="og:image" content="miner-og-image.html">
+	<meta property="og:title" content="SAFEMOON MINER">
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="Hire Miners to earn SAFEMOON">
+	<meta property="og:url" content="index-2.html">
+	<!-- Twitter meta -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="index-2.html">
+	<meta name="twitter:title" content="SAFEMOON MINER">
+	<meta name="twitter:description" content="Hire Miners to earn SAFEMOON">
+	<meta name="twitter:image" content="miner-og-image.html">
+	<!-- favicon files -->
+
+	<meta name="msapplication-TileColor" content="#2b5797">
+	<meta name="theme-color" content="#000000">
+	<title>SAFEMOON MINER</title>
+	<!-- bootstrap core CSS -->
+	<link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<link href="assets/css/jumbotron-narrow.css" rel="stylesheet">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/custom.css" rel="stylesheet">
+	<!-- <link href="fonts.min.css" rel="stylesheet" type="text/css"> -->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&amp;display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="modal" id="myModal">
+		<div class="modal-content">
+			<div id="modal-internal"></div>
+		</div>
+	</div>
+	<div class="custom-container">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div></div>
+				<div class="navbar-header">
+				</div>
+
+				<div class="mobile-align">
+					<ul class="nav navbar-nav navbar-right font-weight-normal">
+						<li><a class="social-pad" href="https://t.me/MiningApesFinance" target="_blank"><img alt="telegram"
+									class="social-icons" src="images/telegram.svg"><span
+									class="hide-mobile">Telegram</span></a></li>
+						<li><a class="social-pad"
+								href="https://polygonscan.com/address/0x9a56b95222059dc7bc8708149309639d083c98b6#code"
+								target="_blank"><img alt="BscScan Logo" class="social-icons" src="images/bscan_logo_white.png"><span
+									class="hide-mobile">Verified Contract</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div>
+			<ul style="display:none;" class="nav nav-tabs nav-justified" id="myTabs" role="tablist">
+				<li role="presentation" class="active"><a href="#home" id="miners-tab" role="tab" data-toggle="tab"
+						aria-controls="home" aria-expanded="true">SAFEMOON Miner</a></li>
+			</ul>
+			<div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade active in" role="tabpanel" id="home" aria-labelledby="miners-tab">
+
+
+					<div class="banner">
+						<h1 style="color:white;">SHIBA INU Miner</h1>
+						<div class="title">
+							<p class="daily">3% Daily</p>
+							<p class="apr">1,095% APR</p>
+						</div>
+					</div>
+					<div>
+						<div class="container-fluid miners-tally-container">
+							<img alt="Miners" class="icon" src="images/miner.svg">
+							<h2 class="tally-text"><u><span class="num-miners">0</span></u> Miners</h2>
+						</div>
+						<div class="digging-mined-container">
+							<div class="custom-row">
+								<img alt="Digging" class="icon" src="images/pickaxe.svg">
+								<div class="dm-container-right">
+									<h2>Digging</h2>
+									<p><span id="production-rate">0</span> feet per hour</p>
+								</div>
+							</div>
+							<div class="custom-row">
+								<img alt="Mined" class="icon" src="images/mine.png">
+								<div class="dm-container-right">
+									<h2>Mined</h2>
+									<p><span id="sell-price">?</span> SAFEMOON</p>
+									<p><span id="until-full">?</span> until full</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="spend-container">
+							<div class="spend-input-continer">
+								<label for="approve">1. Enter SAFEMOON Amount & Click Approve Below</label>
+								<div class="spend-input">
+									<input class="form-control" id="spend-allowance" name="approve" onchange="" step="1000"
+									type="number" value="50">
+									<span class="bnb-text">SAFEMOON</span>
+													</div>
+									<button class="btn btn-lg btn-buy" onclick="approve()" role="button">
+								Approve Spend
+							</button>
+							<p id="spend-limit"></p>
+
+								<label for="spend">2. Enter SAFEMOON Amount & Click Hire Below</label>
+								<div class="spend-input">
+									<input class="form-control" id="eth-to-spend" name="spend" onchange="updateBuyPrice()" step="100"
+									type="number" value="5">
+									<span class="bnb-text">SAFEMOON</span>
+								</div>
+							</div>
+							<button class="btn btn-lg btn-buy" onclick="buyEggs2()" role="button">
+								Hire <span id="eggs-to-buy-2">?</span> Miners
+							</button>
+						</div>
+						<div class="other-button-container">
+							<button class="btn btn-lg btn-hatch" onclick="hatchEggs1()"
+									role="button">Hire more Miners</button>
+							<button class="btn btn-lg btn-sell"
+									onclick="sellEggs(displayTransactionMessage); document.getElementById('sellprice')"
+									role="button">Pocket your SAFEMOON</button>
+						</div>
+
+						<div class="altcolor">
+							<img alt="Digging" class="icon" src="images/SHIB_logo.png">
+							<div>
+								<p>Contract: <span id="contract-balance">?</span></p>
+								<p>You: <span id="user-balance">?</span></p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<footer class="footer">
+
+						<div class="">
+							<div class="col-md-12">
+								<font style="font-size:14px">
+									<center>
+										<p>Earn 10% of the SAFEMOON used to hire miners by anyone who starts mining
+											using your link: <span style="color:#97D9E1;font-weight:bold" id="ref-link">?</span>
+									</center>
+								</font>
+							</div>
+
+
+							<center>
+								<ul class="nav navbar-nav navbar-right font-weight-normal">
+									<li><a class="social-pad" href="https://t.me/MiningApesFinance" target="_blank"><img
+												alt="Telegram" class="social-icons" src="images/telegram.svg"><span
+												class="hide-mobile">Telegram</span></a></li>
+									<li><a class="social-pad"
+											href="https://polygonscan.com/address/0x9a56b95222059dc7bc8708149309639d083c98b6#code"
+											target="_blank"><img alt="BscScan Logo" class="social-icons"
+												src="images/bscan_logo_white.png"><span class="hide-mobile">Verified
+												Contract</span></a></li>
+								</ul>
+							</center>
+
+						</div>
+				</footer>
+			</div>
+
+			<!-- scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/interface.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/web3.min.js"></script>
+			<script src="assets/js/main_eth.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+
+</body>
+
+<!-- Mirrored from dextoken-miner.finance/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 28 Sep 2021 12:22:38 GMT -->
+</html>
